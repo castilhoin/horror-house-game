@@ -1,4 +1,5 @@
 from room import Room
+from item import Item
 
 kitchen = Room("Kitchen")
 kitchen.set_description("A dank and dirty place, buzzing with flies")
