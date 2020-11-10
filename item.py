@@ -1,6 +1,6 @@
 class Item():
-    def __init__(self):
-        self.name = None
+    def __init__(self, item_name):
+        self.name = item_name
         self.description = None
 
     def set_name(self, item_name):
@@ -14,3 +14,6 @@ class Item():
 
     def get_description(self):
         return self.description
+
+    def describe(self):
+        print("The [" + self.name + "] is here - " + self.description)
