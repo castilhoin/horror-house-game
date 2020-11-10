@@ -1,6 +1,12 @@
 from room import Room
 from item import Item
 from character import Enemy, Friend
+from info import Info
+
+spooky_house = Info("The Spooky House", "A Text-based Horror Game")
+spooky_house.welcome()
+Info.info()
+Info.author = "Pedro Castilho"
 
 kitchen = Room("Kitchen")
 kitchen.set_description("A dank and dirty place, buzzing with flies")
@@ -12,6 +18,8 @@ ballroom.set_description(
 dining_hall = Room("Dining Hall")
 dining_hall.set_description(
     "A vast room with a shiny wooden floor; huge candlesticks guard the entrance")
+
+print("There are " + str(Room.number_of_rooms) + " rooms to explore")
 
 kitchen.link_room(dining_hall, "south")
 dining_hall.link_room(kitchen, "north")
@@ -65,3 +73,5 @@ while dead == False:
                 inhabitant.hug()
         else:
             print("There is no one here to hug :(")
+
+Info.credits()

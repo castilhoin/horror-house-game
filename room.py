@@ -1,9 +1,12 @@
 class Room():
+    number_of_rooms = 0
+
     def __init__(self, room_name):
         self.name = room_name
         self.description = None
         self.linked_rooms = {}
         self.character = None
+        Room.number_of_rooms = Room.number_of_rooms + 1
 
     def set_name(self, room_name):
         self.name = room_name
@@ -32,7 +35,7 @@ class Room():
 
     def get_details(self):
         print("The " + self.get_name())
-        print("-------------------")
+        print("--------------------")
         print(self.get_description())
         for direction in self.linked_rooms:
             room = self.linked_rooms[direction]
