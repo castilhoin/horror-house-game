@@ -41,3 +41,12 @@ class Enemy(Character):
         else:
             print(self.name + " crushes you, puny adventurer")
             return False
+
+
+class Friend(Character):
+    def __init__(self, char_name, char_description):
+        super().__init__(char_name, char_description)
+        self.feeling = None
+
+    def hug(self):
+        print(self.name + " hugs you back!")
